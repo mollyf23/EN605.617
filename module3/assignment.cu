@@ -159,7 +159,7 @@ static double get_time(void)
 {
 	struct timespec t;
 	clock_gettime(CLOCK_MONOTONIC, &t);
-	return t.tv_sec * 1000 + t.tv_nsec / 1000000;
+	return t.tv_sec * 1000.0 + t.tv_nsec / 1000000.0;
 }
 
 int main(int argc, char** argv)
@@ -244,6 +244,8 @@ int main(int argc, char** argv)
 	printf("no branch:    %9.3f\n", cpu_uniform_ms);
 	printf("branching:    %9.3f\n", cpu_interleaved_ms);
 	printf("warp aligned: %9.3f\n", cpu_warp_aligned_ms);
+
+	printf("gpu timing determined by using ncu profiler.\n");
 
 	cudaFree(gpu_in);
 	cudaFree(gpu_out);

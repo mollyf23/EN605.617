@@ -1,2 +1,2 @@
 all: assignment.cu
-	nvcc assignment.cu -o assignment.exe
+	nvcc -arch=sm_86 -lineinfo assignment.cu -o assignment.exe
