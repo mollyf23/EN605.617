@@ -1,2 +1,2 @@
 all: assignment.cu
-	nvcc -arch=sm_86 assignment.cu -o assignment.exe
+	nvcc -arch=native assignment.cu -o assignment.exe
