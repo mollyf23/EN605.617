@@ -1,9 +1,6 @@
-folder: module5/assignment5
+folder: module6
 build:
   - []
 
 run:
-  - [1048576, 256]
-  - [1048576, 512]
-  - [5000000, 256]
-  - [5000000, 512]
+  - []
